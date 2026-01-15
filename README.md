@@ -1,7 +1,5 @@
 # 🪙 Bitcoin Real-Time MIS & Risk Analysis System
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
-# 🪙 Bitcoin Real-Time MIS & Risk Analysis System
-
 <div align="center">
 
 ![Bitcoin](https://img.shields.io/badge/Bitcoin-BTC-orange?style=for-the-badge&logo=bitcoin)
