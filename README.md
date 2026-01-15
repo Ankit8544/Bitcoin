@@ -1,4 +1,4 @@
-# <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="28"/> Bitcoin Real-Time MIS & Risk Analysis System
+# <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="28"/> BITWISE
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
 <div align="center">
 
@@ -10,7 +10,7 @@
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 ![VBA](https://img.shields.io/badge/VBA-Automation-red?style=for-the-badge&logo=microsoft)
 
-**Enterprise-Grade Real-Time Cryptocurrency Management Information System**
+**Enterprise-Grade Real-Time Excel‑Based Bitcoin Market Intelligence, Risk & MIS Platform**
 
 *Comprehensive Risk Analytics | Live Market Data | Advanced Visualization*
 
