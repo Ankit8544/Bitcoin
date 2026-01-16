@@ -1,4 +1,9 @@
-<img src="Img/Picture1.png" width="420"/>
+<div align="center">
+    <img src="Img/Picture1.png" width="420"/>
+    <p>
+        <strong>Enterprise-Grade Real-Time Bitcoin MIS & Risk Analytics Platform</strong>
+    </p>
+</div>
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
 <div align="center">
 
