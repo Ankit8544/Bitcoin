@@ -1,44 +1,24 @@
 <div align="center">
-
-  <!-- LOGO -->
-  <img src="Img/Picture1.png" width="420"/>
-
-  <br/>
-
-  <!-- PRODUCT TAGLINE -->
-  <p style="font-size: 15px; letter-spacing: 0.4px;">
-    <strong>Enterprise-Grade Real-Time Bitcoin MIS & Risk Analytics Platform</strong>
-  </p>
-
-  <br/>
-
-  <!-- TECHNOLOGY BADGES -->
-  <img src="https://img.shields.io/badge/Bitcoin-BTC-orange?style=for-the-badge&logo=bitcoin"/>
-  <img src="https://img.shields.io/badge/Binance-API-yellow?style=for-the-badge&logo=binance"/>
-  <img src="https://img.shields.io/badge/Binance-WebSocket-yellow?style=for-the-badge&logo=binance"/>
-  <img src="https://img.shields.io/badge/XlOil-RTD%20Stream-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Excel-Analytics-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
-  <img src="https://img.shields.io/badge/VBA-Automation-red?style=for-the-badge&logo=microsoft"/>
-
-  <br/><br/>
-
-  <!-- VALUE STATEMENT -->
-  <p style="font-size: 14px; max-width: 900px;">
-    Comprehensive Risk Analytics • Live Market Data • Institutional-Quality MIS Reporting • Advanced Visualization
-  </p>
-
-  <br/>
-
-  <!-- NAVIGATION -->
-  <p>
-    <a href="#-key-features"><strong>Features</strong></a> •
-    <a href="#-installation"><strong>Installation</strong></a> •
-    <a href="#-documentation"><strong>Documentation</strong></a> •
-    <a href="#-system-architecture"><strong>Architecture</strong></a>
-  </p>
-
+    <img src="Img/Picture1.png" width="420"/>
+    <p>
+        <strong>Enterprise-Grade Real-Time Excel‑Based Bitcoin Market Intelligence, Risk & MIS Platform</strong>
+    </p>
 </div>
+<artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
+<div align="center">
+
+![Bitcoin](https://img.shields.io/badge/Bitcoin-BTC-orange?style=for-the-badge&logo=bitcoin)
+![Binance](https://img.shields.io/badge/Binance-API-yellow?style=for-the-badge&logo=binance)
+![Binance](https://img.shields.io/badge/Binance-WebSocket-yellow?style=for-the-badge&logo=binance)
+![XlOil](https://img.shields.io/badge/XlOil-Data%20Stream-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![VBA](https://img.shields.io/badge/VBA-Automation-red?style=for-the-badge&logo=microsoft)
+
+*Comprehensive Risk Analytics | Live Market Data | Advanced Visualization*
+
+[Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Architecture](#-system-architecture)
+
 ---
 
 </div>
