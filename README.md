@@ -20,7 +20,6 @@
 [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Architecture](#-system-architecture)
 
 </div>
----
 
 ## 📌 Executive Summary
 
