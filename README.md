@@ -1,7 +1,7 @@
-<div align="center">
-  <img src="Img/Bitwise.png" width="120"/>
-  <h1>BITWISE</h1>
-</div>
+<h1 style="display: flex; align-items: center; gap: 12px;">
+  <img src="Img/Bitwise.png" width="90"/>
+  <span>BITWISE</span>
+</h1>
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
 <div align="center">
 
