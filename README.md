@@ -1,4 +1,4 @@
-<img src="Img/Picture1.png" width="120"/>
+<img src="Img/Picture1.png" width="420"/>
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
 <div align="center">
 
