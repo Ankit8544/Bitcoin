@@ -1,6 +1,5 @@
 <h1 style="display: flex; align-items: center; gap: 12px;">
-  <img src="Img/Bitwise.png" width="90"/>
-  <span>BITWISE</span>
+  <img src="Img/Picture1.png" width="90"/>
 </h1>
 <artifact identifier="btc-mis-documentation" type="text/markdown" title="Bitcoin Real-Time MIS & Risk Analysis - Complete Documentation">
 <div align="center">
