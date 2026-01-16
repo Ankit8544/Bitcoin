@@ -29,10 +29,27 @@
 
 ## 🎯 Overview
 
-The **Bitcoin Real-Time MIS & Risk Analysis System** is an enterprise-grade financial analytics platform that provides institutional-quality market intelligence, risk assessment, and portfolio management for cryptocurrency trading operations. Built on a sophisticated real-time data streaming architecture, this system delivers sub-second market updates, multi-timeframe technical analysis, and comprehensive risk metrics through an intuitive Excel-based interface.
+The **Bitcoin Real-Time MIS & Risk Analysis System** is an Excel-based analytics project focused on structured **Bitcoin market intelligence, portfolio monitoring, and risk analysis**. It integrates **real-time and historical data streams from XlOil**, including rolling ticker data, multi-timeframe OHLC price series, and aggregated trade data across intraday to long-term intervals. The system enables **user-defined Bitcoin asset tracking**, **dedicated portfolio reporting**, and **trade-level analysis**, consolidated through an **overall MIS dashboard** for decision-ready insights. The project is **currently under development**, with a scalable architecture designed to support institutional-style reporting and advanced risk analytics within Excel.
+
+---
 
 ### 🎓 Project Objectives
+
+* Build a **real-time Excel-based MIS framework** for Bitcoin market monitoring
+* Integrate **multi-timeframe price and trade data** into structured analytics
+* Enable **portfolio-level performance and risk visibility**
+* Deliver **clean, executive-ready dashboards** suitable for professional reporting
+* Establish a **scalable foundation** for advanced risk and behavior metrics
+
+---
+
 ### 💡 Core Value Proposition
+
+* **Single-source Excel MIS** combining market, trade, and portfolio analytics
+* **Multi-timeframe insight** from tick-level to long-term price behavior
+* **Transparent, auditable analytics** without black-box indicators
+* **Institutional-style reporting structure** using familiar Excel tooling
+* Designed for **clarity, control, and decision support**, not speculation
 
 ---
 
