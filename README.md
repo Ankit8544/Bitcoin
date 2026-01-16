@@ -15,7 +15,7 @@
 ![Excel](https://img.shields.io/badge/Excel-Analytics-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 ![VBA](https://img.shields.io/badge/VBA-Automation-red?style=for-the-badge&logo=microsoft)
 
-*Comprehensive Risk Analytics | Live Market Data | Advanced Visualization*
+*Comprehensive Risk Analytics | Live Market Data | Institutional-Quality MIS Reporting | Advanced Visualization*
 
 [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Architecture](#-system-architecture)
 
