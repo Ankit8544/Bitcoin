@@ -15,285 +15,674 @@
 ![Excel](https://img.shields.io/badge/Excel-Analytics-217346?style=for-the-badge\&logo=microsoft-excel\&logoColor=white)
 ![VBA](https://img.shields.io/badge/VBA-Automation-red?style=for-the-badge\&logo=microsoft)
 
-*Comprehensive Risk Analytics | Live Market Data | Institutional-Quality MIS Reporting | Advanced Visualization*
+### 🚀 Real-Time Portfolio Analytics | Advanced Risk Metrics | Institutional-Grade MIS
 
-[Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Architecture](#-system-architecture)
+*A professional-grade Bitcoin portfolio management and risk analysis system built with Excel, Python, and VBA, featuring real-time data streaming, comprehensive analytics, and automated reporting.*
+
+[Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation) • [Usage](#-usage) • [Documentation](#-documentation)
 
 </div>
 
-## 📌 Executive Summary
+---
 
-This project is an **enterprise‑grade, Excel‑native Bitcoin Market Intelligence, Risk & MIS platform** designed to deliver **real‑time market visibility**, **portfolio‑level risk analytics**, and **institutional reporting** without requiring external BI tools.
+## 📋 Table of Contents
 
-The system integrates **Binance REST + WebSocket APIs**, **xlOil streaming functions**, **Python async engines**, and **advanced Excel modeling** to create a **live, auditable, and extensible Bitcoin analytics stack** suitable for:
-
-* Portfolio tracking
-* Risk monitoring
-* Trade behavior analysis
-* Management Information System (MIS) reporting
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [System Architecture](#-system-architecture)
+- [Installation](#-installation)
+- [Workbook Structure](#-workbook-structure)
+- [Real-Time Data Streaming](#-real-time-data-streaming)
+- [VBA Automation](#-vba-automation)
+- [Reports & Dashboards](#-reports--dashboards)
+- [Risk Metrics](#-risk-metrics)
+- [Security Features](#-security-features)
+- [Technical Documentation](#-technical-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 Overview
 
-* 🔴 Real‑time Bitcoin market monitoring inside Excel
-* 📊 Professional‑grade portfolio & risk reporting
-* 🧮 Quantitative risk metrics (drawdown, volatility, Sharpe, CAGR)
-* 🧠 Trade‑level and microstructure insights
-* 🏦 Institutional‑style MIS dashboards
-* 🔐 Strong data governance & fault‑tolerant architecture
+The **Bitcoin MIS & Risk Management System** is an enterprise-level portfolio analytics platform that combines the flexibility of Excel with the power of Python streaming to deliver real-time insights into Bitcoin holdings. Built for traders, portfolio managers, and institutions, this system provides:
 
----
-
-## 🚀 Key Features
-
-### 📡 Live Market Intelligence
-
-* 24‑Hour Rolling Ticker (price, volume, volatility)
-* Multi‑timeframe OHLC (1m → 1d)
-* Aggregate trade flow analytics
-* All‑market coin scanner
-
-### 💼 Portfolio & Asset Management
-
-* Secure Bitcoin asset entry
-* Real‑time valuation & P&L
-* Holding‑period analytics
-* Risk‑adjusted performance metrics
-
-### ⚠️ Risk & Behavior Analytics
-
-* Max Drawdown & recovery analysis
-* Annualized volatility
-* Sharpe Ratio
-* Win/Loss behavior & distribution
-
-### 📑 MIS & Reporting
-
-* Executive Overview Dashboard
-* Dedicated Portfolio Report
-* Trade & Market Microstructure Report
-* Data‑driven insights & alerts
+- ⚡ **Real-time price feeds** via WebSocket streaming
+- 📊 **Institutional-grade risk metrics** (CAGR, Sharpe Ratio, Max Drawdown, Volatility)
+- 🔐 **Security monitoring** with Telegram integration
+- 📈 **Multi-timeframe analysis** from 1-minute to daily intervals
+- 🎨 **Professional dashboards** with automated reporting
 
 ---
 
-## 🧱 System Architecture
+## ✨ Key Features
+
+### 💼 Portfolio Management
+- **VBA-Powered Asset Entry Form** with validation and auto-calculations
+- **Trade-level Performance Tracking** with unrealized P&L
+- **Position Aggregation** across multiple purchase dates
+- **Dynamic Portfolio Valuation** updated in real-time
+
+### 📡 Real-Time Data Streaming (XlOil)
+| Stream Type | Timeframes | Update Frequency |
+|------------|------------|------------------|
+| **24h Ticker** | Rolling 24h | Sub-second |
+| **Kline Data** | 1m, 15m, 1h, 4h, 1d | Per candle close |
+| **Aggregate Trades** | 1m, 5m, 15m, 1h, 4h, 1d | Per trade |
+| **All Coins Ticker** | Real-time | Continuous |
+| **Comparison Asset** | User-selectable | 1h intervals |
+
+### 📊 Analytics & Reporting
+- **Portfolio Equity Curve** visualization
+- **Drawdown Analysis** with peak tracking
+- **Return Attribution** by purchase cohort
+- **Correlation Analysis** vs other cryptocurrencies
+- **Trade Microstructure** metrics (order flow, aggressor ratios)
+
+### 🔒 Security & Monitoring
+- **Telegram Alert System** on file access
+- **Geolocation Tracking** (IP, city, ISP, coordinates)
+- **Access Audit Trail** with timestamp and system info
+- **Automatic Calculation Refresh** on workbook open
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TB
+    A[Excel Workbook] --> B[XlOil Add-in]
+    B --> C[Python Streaming Layer]
+    C --> D[Binance WebSocket API]
+    C --> E[Binance REST API]
+    
+    A --> F[VBA Automation]
+    F --> G[Asset Entry Form]
+    F --> H[Auto-Calculation]
+    F --> I[Telegram Security]
+    
+    A --> J[Data Sheets]
+    J --> K[Real-time Streams]
+    J --> L[Historical Data]
+    
+    A --> M[Reporting Layer]
+    M --> N[Portfolio Report]
+    M --> O[Risk Dashboard]
+    M --> P[Trade Analysis]
+```
+
+### Technology Stack
+
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| **Frontend** | Microsoft Excel | User interface & visualization |
+| **Streaming Engine** | XlOil (Python) | Real-time data integration |
+| **Data Source** | Binance API | Market data provider |
+| **Automation** | VBA | Form handling & security |
+| **Notifications** | Telegram Bot API | Security alerts |
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+```bash
+# Required Software
+✅ Microsoft Excel 2016 or later
+✅ Python 3.8+
+✅ XlOil Add-in
+```
+
+### Step 1: Install XlOil
+
+```bash
+# Via pip
+pip install xloil
+
+# Or download installer from
+https://github.com/cunnane/xloil/releases
+```
+
+### Step 2: Install Python Dependencies
+
+```bash
+pip install aiohttp websockets python-dateutil
+```
+
+### Step 3: Configure XlOil Functions
+
+1. Place Python files in XlOil modules directory:
+   - `aggTrade.py`
+   - `AllCoinTicker.py`
+   - `CryptoPriceOnDate.py`
+   - `KlineStream.py`
+   - `TickerStream.py`
+
+2. Default location:
+   ```
+   %APPDATA%\xloil\modules\
+   ```
+
+### Step 4: Enable Macros
+
+1. Open Excel → **File** → **Options** → **Trust Center**
+2. Click **Trust Center Settings** → **Macro Settings**
+3. Select **Enable all macros** (or sign VBA project)
+
+### Step 5: Configure Telegram (Optional)
+
+In `Module2`, update credentials:
+
+```vba
+Const TELEGRAM_BOT_TOKEN As String = "YOUR_BOT_TOKEN"
+Const TELEGRAM_CHAT_ID As String = "YOUR_CHAT_ID"
+```
+
+---
+
+## 📁 Workbook Structure
+
+### Sheet Navigation
+
+| Sheet Name | Type | Purpose |
+|-----------|------|---------|
+| 🏠 **Home Page** | Dashboard | Welcome screen with key metrics |
+| ➕ **Add Assets** | Form | VBA-powered Bitcoin purchase entry |
+| 💼 **Assets** | Data | Portfolio holdings & performance table |
+| 📊 **24h Ticker** | Stream | Real-time 24-hour rolling statistics |
+| 📈 **1m / 15m / 1h / 4h / 1d** | Stream | OHLCV candlestick data |
+| ⏳ **Holding Period** | Stream | Dynamic klines since first purchase |
+| 🔄 **AT_1m / 5m / 15m / 1h / 4h / 1d** | Stream | Aggregated trade microstructure |
+| 🌐 **All Coins** | Stream | Multi-asset ticker feed |
+| 🔀 **Comparing Asset** | Stream | User-selected comparison symbol |
+| 🧮 **Stuff** | Helper | Calculated metrics for dashboards |
+| 📉 **Trade Analysis** | Planned | Order flow analytics |
+| 📑 **Trade Report** | Planned | Transaction history report |
+| ⚠️ **Risk and Behavior Metrics** | Analytics | Historical risk calculations |
+| 📋 **Portfolio Report** | Report | Visual performance summary |
+| ℹ️ **Info** | Static | Educational Bitcoin content |
+| 🎛️ **Dashboard** | Planned | Unified MIS view |
+| 🟢 **Data_Status** | Monitor | Stream health indicators |
+
+---
+
+## 📡 Real-Time Data Streaming
+
+### Architecture Overview
+
+All streaming functions use **XlOil's async RTD** capabilities to push live data from Binance WebSocket and REST APIs directly into Excel cells.
+
+### 1️⃣ 24-Hour Ticker Stream
+
+**Formula:** `=TickerStream("BTCUSDT", "c")`
+
+**Available Fields:**
+
+| Field | Key | Example Formula |
+|-------|-----|----------------|
+| Last Price | `c` | `=TickerStream("BTCUSDT", "c")` |
+| Price Change % | `P` | `=TickerStream("BTCUSDT", "P")/100` |
+| High Price | `h` | `=TickerStream("BTCUSDT", "h")` |
+| Low Price | `l` | `=TickerStream("BTCUSDT", "l")` |
+| Volume (24h) | `v` | `=TickerStream("BTCUSDT", "v")` |
+
+**Implementation (`TickerStream.py`):**
+
+```python
+@xloil.func
+async def TickerStream(symbol: str, field: str):
+    """Stream single Binance ticker field to Excel"""
+    key = Ticker_Field_Name.get(field, field)
+    res = BinanceTickerStream(symbol.lower(), key)
+    
+    while True:
+        value = await asyncio.to_thread(next, res)
+        yield value  # Updates Excel cell
+        await asyncio.sleep(0)
+```
+
+**Data Flow:**
 
 ```
-Binance API (REST + WebSocket)
-        ↓
-Python Async Engines (xlOil)
-        ↓
-Excel Streaming Sheets (Raw Data)
-        ↓
-Data Transformation Layer
-        ↓
-Risk Models & Metrics Engine
-        ↓
-Dashboards & MIS Reports
+Binance WS → Python Generator → XlOil → Excel Cell (auto-refresh)
 ```
 
 ---
 
-## 🗂️ Data Architecture & Implementation
+### 2️⃣ Kline (Candlestick) Streams
 
-### 1️⃣ 24‑Hour Rolling Ticker Sheet (`24h Ticker`)
+**Formula:** `=KlineStream("BTCUSDT", "1h", 500)`
 
-**Source:** Binance WebSocket `@ticker`
+**Parameters:**
+- `symbol`: Trading pair (e.g., "BTCUSDT")
+- `interval`: `1m`, `15m`, `1h`, `4h`, `1d`
+- `limit`: Number of historical candles to backfill
 
-| Field               | xlOil Formula                      | Description               |
-| ------------------- | ---------------------------------- | ------------------------- |
-| Event Time          | `=TickerStream("BTCUSDT","E")`     | Event timestamp (IST)     |
-| Symbol              | `=TickerStream("BTCUSDT","s")`     | Trading pair              |
-| Price Change        | `=TickerStream("BTCUSDT","p")`     | Absolute 24h price change |
-| Price Change %      | `=TickerStream("BTCUSDT","P")/100` | Normalized percentage     |
-| Weighted Avg Price  | `=TickerStream("BTCUSDT","w")`     | VWAP                      |
-| Last Price          | `=TickerStream("BTCUSDT","c")`     | Latest traded price       |
-| Last Quantity       | `=TickerStream("BTCUSDT","Q")`     | Last trade size           |
-| Open Price          | `=TickerStream("BTCUSDT","o")`     | 24h open                  |
-| High / Low          | `h / l`                            | Intraday range            |
-| Base / Quote Volume | `v / q`                            | Liquidity metrics         |
-| Trade Count         | `n`                                | Market activity           |
+**Output Columns:**
 
-**Usage:**
+| Column | Description |
+|--------|-------------|
+| OpenDateTimeIST | Candle open time (IST timezone) |
+| Open / High / Low / Close | OHLC prices |
+| Volume | Base asset volume |
+| QuoteAssetVolume | Quote asset volume (USDT) |
+| NumberOfTrades | Trade count in candle |
+| TakerBuyBaseVol | Aggressive buy volume |
 
-* Intraday volatility monitoring
-* Market regime classification
-* Executive price snapshot
-
----
-
-### 2️⃣ OHLC Market Data (Multi‑Timeframe)
-
-**Source:** Binance REST + WebSocket klines
-
-| Sheet            | Formula                             | Purpose                 |
-| ---------------- | ----------------------------------- | ----------------------- |
-| `1m`             | `=KlineStream("BTCUSDT","1m",61)`   | Microstructure analysis |
-| `15m`            | `=KlineStream("BTCUSDT","15m",500)` | Short‑term trends       |
-| `1h`             | `=KlineStream("BTCUSDT","1h",500)`  | Swing structure         |
-| `4h`             | `=KlineStream("BTCUSDT","4h",300)`  | Market regimes          |
-| `Holding Period` | `=KlineStream("BTCUSDT","1d",Days)` | Portfolio analytics     |
-| `1d`             | Dynamic OFFSET logic                | Rolling daily history   |
-
-**Captured Metrics:**
-
-* OHLC prices
-* Volume & quote volume
-* Number of trades
-* Taker buy/sell pressure
+**Features:**
+- ✅ **Auto-backfill** via REST API on startup
+- ✅ **WebSocket updates** for real-time candles
+- ✅ **Auto-refresh** on candle close
+- ✅ **Rolling buffer** to maintain `limit` rows
 
 ---
 
-### 3️⃣ Aggregate Trade Streams (`AT_*`)
+### 3️⃣ Aggregate Trade Streams
 
-**Source:** Binance `@aggTrade`
+**Formula:** `=AggTradeStreamWindow("BTCUSDT", 60)`
 
-| Sheet  | Formula                                 | Window               |
-| ------ | --------------------------------------- | -------------------- |
-| AT_1m  | `=AggTradeStreamWindow("BTCUSDT",1)`    | Order flow           |
-| AT_5m  | `=AggTradeStreamWindow("BTCUSDT",5)`    | Momentum             |
-| AT_15m | `=AggTradeStreamWindow("BTCUSDT",15)`   | Intraday behavior    |
-| AT_1h  | `=AggTradeStreamWindow("BTCUSDT",60)`   | Market participation |
-| AT_4h  | `=AggTradeStreamWindow("BTCUSDT",240)`  | Institutional flow   |
-| AT_1d  | `=AggTradeStreamWindow("BTCUSDT",1440)` | Daily structure      |
+**Parameters:**
+- `symbol`: Trading pair
+- `minutes`: Time window (e.g., 60 = last 1 hour)
 
-**Captured Fields:**
+**Output Columns:**
 
-* Trade time (IST)
-* Price & quantity
-* AggTrade IDs
-* Buyer/Seller aggressor flag
+| Column | Description |
+|--------|-------------|
+| TradeTimeIST | Execution timestamp |
+| Price | Trade price |
+| Quantity | Trade size (BTC) |
+| AggTradeID | Binance aggregate trade ID |
+| IsBuyerMaker | True if sell order hit bid |
+| IsBestMatch | Best price match flag |
+
+**Use Cases:**
+- Order flow analysis
+- Aggressor identification (buy vs sell pressure)
+- High-frequency trade reconstruction
 
 ---
 
-### 4️⃣ All‑Market Scanner (`All Coins`)
+### 4️⃣ All Coins Ticker
 
 **Formula:** `=AllCoinsTickerStream()`
 
-**Purpose:**
+**Returns:** Live table of **all Binance symbols** with:
+- Last Price
+- 24h Change %
+- High / Low
+- Volume
 
-* Cross‑market comparison
-* Correlation screening
-* Market heatmap generation
+**Update Frequency:** Real-time (every tick)
 
 ---
 
-### 5️⃣ Comparative Asset Analysis
+### 5️⃣ Comparison Asset Stream
 
-**Sheet:** `Comparing Asset`
+**Formula:** `=KlineStream($F$1, "1h", 500)`
+
+**Dynamic Symbol Selection:**
+- Cell `F1` contains dropdown list of symbols
+- Stream auto-updates when selection changes
+- Enables correlation analysis vs Bitcoin
+
+---
+
+## 🤖 VBA Automation
+
+### Module 1: ForceFullRecalc
+
+**Purpose:** Ensures complete formula recalculation on workbook open.
+
+```vba
+Public Sub ForceFullRecalc()
+    Application.CalculateFullRebuild
+End Sub
+```
+
+**When Called:** 3 seconds after workbook opens (via `Workbook_Open`)
+
+**Why Needed:** Excel's calculation engine can cache stale values after file closure. This forces a fresh calculation chain rebuild.
+
+---
+
+### Module 2: Telegram Security Integration
+
+**Purpose:** Sends real-time access alerts with geolocation to Telegram.
+
+**Captured Data:**
+- 📅 File open timestamp
+- 👤 Windows username
+- 💻 Computer name
+- 🌍 Public IP address
+- 📍 City, region, country
+- 🗺️ GPS coordinates
+- 🌐 ISP details
+- ⏰ Timezone
+
+**Sample Alert:**
 
 ```
-=KlineStream($F$1,"1h",500)
+🔔 FILE OPENED - LOCATION ALERT
+
+Time: 19-Jan-2026 12:30:45 PM
+
+Location Details:
+IP Address: 203.0.113.45
+City: Patna
+Region: Bihar
+Country: India
+Coordinates: 25.5941° N, 85.1376° E
+ISP: Jio Infocomm Ltd
+
+User: JohnDoe
+PC Name: DESKTOP-ABC123
 ```
 
-Used for:
+**Implementation Flow:**
 
-* BTC vs Altcoin correlation
-* Risk diversification analysis
-* Relative strength modeling
-
----
-
-### 6️⃣ Portfolio & Asset Data (`Assets`)
-
-**User‑Entered Fields:**
-
-* Quantity (BTC)
-* Buy Date
-* Buy Price
-* Invested Amount
-
-**Derived Metrics:**
-
-* Current Value
-* Absolute & % P&L
-* Holding Days
-* CAGR‑style returns
+```mermaid
+graph LR
+    A[Workbook Opens] --> B[Call SendLocation]
+    B --> C[HTTP GET ipapi.co]
+    C --> D[Parse JSON Response]
+    D --> E[Format Message]
+    E --> F[POST to Telegram API]
+    F --> G[Alert Delivered]
+```
 
 ---
 
-## ⚠️ Risk & Performance Metrics Engine
+### Module 3: Asset Entry Automation
 
-| Metric         | Description               |
-| -------------- | ------------------------- |
-| Max Drawdown   | Peak‑to‑trough loss       |
-| Volatility     | Annualized std. deviation |
-| Sharpe Ratio   | Risk‑adjusted return      |
-| CAGR           | Annualized performance    |
-| Win Rate       | % profitable days         |
-| Best/Worst Day | Tail risk analysis        |
+**Purpose:** Structured data entry from "Add Assets" form to "Assets" table.
 
----
+**Process:**
 
-## 🛡️ Data Governance & Reliability
+1. **User enters data** in form cells:
+   - `G6`: Quantity (BTC)
+   - `G11`: Purchase Date
+   - `G16`: Buy Price (auto-fetched via `CryptoPriceOnDate`)
+   - `G21`: Invested Amount (auto-calculated)
 
-### 🔐 Data Integrity
+2. **Submit button triggers:**
+   ```vba
+   Sub Submit_Bitcoin_Data()
+       ' Add row to Assets table
+       ' Map form values to table columns
+       ' Clear input fields
+       ' Show success message (auto-clears after 2s)
+   End Sub
+   ```
 
-* Immutable raw data sheets
-* Clear separation: Raw → Model → Report
-
-### 🔄 Fault Tolerance
-
-* WebSocket auto‑reconnect
-* REST backfill on reconnect
-* Last‑snapshot freeze (no Excel errors)
-
-### 🕒 Time Standardization
-
-* UTC → IST conversion at ingestion
-* Consistent timestamps across sheets
-
-### 📜 Auditability
-
-* Transparent Excel formulas
-* Deterministic calculations
-* Reproducible metrics
+3. **Data validation:**
+   - Buy Price auto-fetched: `=CryptoPriceOnDate("BTCUSDT", G11)`
+   - Invested Amount: `=G6 * G16`
 
 ---
 
-## 📊 Dashboards & Reports
+### ThisWorkbook: Startup Sequence
 
-### 🧭 Overview Dashboard
+```vba
+Private Sub Workbook_Open()
+    Sheets("Home Page").Activate
+    Application.OnTime Now + TimeValue("00:00:03"), "ForceFullRecalc"
+    Call SendLocation  ' Security alert
+End Sub
+```
 
-* Market snapshot
-* Portfolio value
-* Risk indicators
-
-### 💼 Portfolio Report
-
-* Holdings summary
-* Risk & performance metrics
-* Drawdown visualization
-
-### 🔁 Trade Report
-
-* Aggregate trade behavior
-* Buy/Sell pressure
-* Volume clusters
-
-### 🧠 Insights Report
-
-* Market regime classification
-* Volatility alerts
-* Risk concentration signals
+**Execution Order:**
+1. Navigate to Home Page
+2. Wait 3 seconds
+3. Force full recalculation
+4. Send Telegram access notification
 
 ---
 
-## 🛣️ Roadmap (Planned Enhancements)
+## 📊 Reports & Dashboards
 
-* 🔮 Predictive volatility models
-* 📈 Value‑at‑Risk (VaR / CVaR)
-* 🤖 Signal‑based trade analytics
-* ☁️ Cloud backup & versioning
-* 🧾 Export‑ready institutional reports
+### Portfolio Report Sheet
+
+**Components:**
+
+#### 📌 Summary Cards
+
+| Metric | Data Source | Formula |
+|--------|-------------|---------|
+| Total Investment | Assets Table | `SUM(Invested Amount)` |
+| Current Value | Real-time Price × Quantity | `Current Price × Total Quantity` |
+| Total P&L | Current - Invested | `Current Value - Total Investment` |
+| Total Return % | P&L / Investment | `(Total P&L / Total Investment) × 100` |
+| Holding Days | Purchase to Now | `MAX(Days Held)` |
+| CAGR % | Annualized Return | `((Final/Initial)^(365/Days) - 1) × 100` |
+| Max Drawdown % | Peak to Trough | `MIN(Drawdown %)` from Risk sheet |
+
+#### 📈 Portfolio Equity Curve
+
+- **X-Axis:** Date (from Risk & Behavior Metrics)
+- **Y-Axis:** Portfolio Value (USD)
+- **Data Points:** Daily snapshots since first purchase
+
+#### 📉 Drawdown Curve
+
+- **X-Axis:** Date
+- **Y-Axis:** Drawdown % (negative scale)
+- **Visualization:** Area chart showing underwater equity
 
 ---
 
-## ✅ Conclusion
+### Risk & Behavior Metrics Sheet
 
-This project establishes a **professional‑grade, Excel‑native Bitcoin analytics platform** that bridges the gap between **retail dashboards** and **institutional risk systems**, delivering **live data, quantitative rigor, and executive‑ready MIS reporting** — all within a transparent and governed Excel environment.
+**Calculated Fields:**
+
+| Metric | Formula | Purpose |
+|--------|---------|---------|
+| **Portfolio Value** | `Total Quantity × Daily Close Price` | Historical valuation |
+| **Running Peak** | `MAX(Portfolio Value to date)` | High-water mark |
+| **Drawdown %** | `(Current Value / Running Peak - 1) × 100` | Peak-to-trough decline |
+| **Log Return** | `LN(Today's Price / Yesterday's Price)` | Continuously compounded return |
+| **P&L Amount** | `Today's Value - Yesterday's Value` | Daily profit/loss |
+
+**Data Source:** `Holding Period` kline sheet (daily OHLC since first purchase)
 
 ---
 
-🧠 *Designed for analysts. Built for decision‑makers. Engineered for real‑time intelligence.*
+## ⚠️ Risk Metrics
+
+### Portfolio-Level Metrics (Assets Sheet)
+
+```
+📊 Portfolio Summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Quantity:         0.55 BTC
+Total Invested:         $25,034.95
+Current Price:          $92,561.83
+Current Value:          $50,909.01
+Absolute P&L:           $25,874.06
+P&L %:                  103.35%
+Holding Days:           762 Days
+Annualized Return:      40.49%
+Max Drawdown:           -32.02%
+Volatility (annual):    46.93%
+```
+
+### Risk Calculations
+
+#### 1. CAGR (Compound Annual Growth Rate)
+
+```excel
+=((Current Value / Total Invested)^(365 / Holding Days) - 1) * 100
+```
+
+**Example:**
+- Invested: $25,034.95
+- Current: $50,909.01
+- Days: 762
+- CAGR: **40.49%**
+
+#### 2. Max Drawdown
+
+```excel
+=MIN(Drawdown %) from Risk & Behavior Metrics sheet
+```
+
+**Interpretation:** Largest peak-to-trough decline = **-32.02%**
+
+#### 3. Annualized Volatility
+
+```excel
+=STDEV(Log Returns) * SQRT(365) * 100
+```
+
+**Result:** **46.93%** (typical for Bitcoin)
+
+---
+
+## 🔐 Security Features
+
+### Access Monitoring
+
+| Feature | Implementation | Alert Method |
+|---------|----------------|--------------|
+| **File Access Logging** | `Workbook_Open` event | Telegram message |
+| **Geolocation Tracking** | ipapi.co integration | IP-based city/country |
+| **User Identification** | `Environ("USERNAME")` | Windows login |
+| **System Fingerprinting** | `Environ("COMPUTERNAME")` | Device name |
+| **Timestamp Logging** | `Format(Now, ...)` | ISO 8601 format |
+
+### Privacy & Compliance Notes
+
+⚠️ **Warning:** Telegram integration sends sensitive location data externally. Ensure compliance with:
+- GDPR (if EU users)
+- Company data policies
+- User consent requirements
+
+**Recommendation:** Remove Module2 or disable `Call SendLocation` in production if privacy is a concern.
+
+---
+
+## 🛠️ Technical Documentation
+
+### Python Streaming Architecture
+
+#### XlOil RTD Protocol
+
+XlOil enables **asynchronous Python generators** to push data to Excel cells:
+
+```python
+@xlo.func
+async def MyStream():
+    while True:
+        value = fetch_data()
+        yield value  # Excel cell updates
+        await asyncio.sleep(1)
+```
+
+**Benefits:**
+- ✅ No manual refresh needed
+- ✅ Handles WebSocket reconnections
+- ✅ Thread-safe async I/O
+
+#### Connection Resilience
+
+All streaming functions include:
+
+1. **Auto-reconnect** on WebSocket errors
+2. **Last known value persistence** during disconnections
+3. **Status indicators** (`LIVE` / `DISCONNECTED`)
+
+**Example from `KlineStream.py`:**
+
+```python
+while True:
+    try:
+        async with websockets.connect(ws_url) as ws:
+            async for msg in ws:
+                # Process and yield data
+                yield table
+    except Exception:
+        # Show last snapshot with DISCONNECTED status
+        if last_snapshot:
+            fallback = last_snapshot[:-1] + [STATUS_ROW_DOWN]
+            yield fallback
+        await asyncio.sleep(5)  # Wait before retry
+```
+
+---
+
+### Excel Formula Reference
+
+#### Dynamic Arrays
+
+All streaming functions return **spilled arrays**:
+
+```
+=KlineStream("BTCUSDT", "1h", 500)
+```
+
+Excel automatically creates a table starting from formula cell, expanding down/right as data updates.
+
+#### Volatile Functions
+
+Streaming formulas are **non-volatile** but update via RTD, meaning:
+- ✅ Don't trigger on every Excel recalculation
+- ✅ Update only when Python yields new data
+- ✅ CPU-efficient for large workbooks
+
+---
+
+### Data Sources
+
+#### Binance API Endpoints
+
+| Type | Endpoint | Rate Limit |
+|------|----------|------------|
+| REST Klines | `/api/v3/klines` | 1200/min |
+| REST AggTrades | `/api/v3/aggTrades` | 1200/min |
+| WebSocket Ticker | `wss://.../ticker` | Unlimited |
+| WebSocket Kline | `wss://.../kline_{interval}` | Unlimited |
+
+**No API Key Required** (public market data)
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Please:
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+---
+
+## 📄 License
+
+This project is provided as-is for educational and personal use. 
+
+**Disclaimer:** Not financial advice. Use at your own risk. Cryptocurrency trading involves substantial risk of loss.
+
+---
+
+## 📞 Support
+
+For issues or questions:
+
+- 📧 Email: [your-email@example.com]
+- 💬 Telegram: [@yourusername]
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/repo/issues)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it useful!**
+
+Made with ❤️ for the crypto community
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=yourusername.bitcoin-mis)
+
+</div>
