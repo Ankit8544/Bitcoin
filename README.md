@@ -671,8 +671,8 @@ This project is provided as-is for educational and personal use.
 
 For issues or questions:
 
-- 📧 Email: ankitkumar875740@gmail.com (mailto:ankitkumar875740@gmail.com)
-- 💬 Telegram: @kignoflove (https://t.me/kignoflove)
+- 📧 Email: [ankitkumar875740@gmail.com](mailto:ankitkumar875740@gmail.com)
+- 💬 Telegram: [@kignoflove](https://t.me/kignoflove)
 
 ---
 
@@ -681,7 +681,5 @@ For issues or questions:
 **⭐ Star this repo if you find it useful!**
 
 Made with ❤️ for the crypto community
-
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=yourusername.bitcoin-mis)
 
 </div>
