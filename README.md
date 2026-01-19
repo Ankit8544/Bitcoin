@@ -671,8 +671,8 @@ This project is provided as-is for educational and personal use.
 
 For issues or questions:
 
-- 📧 Email: [ankitkumar875740@gmail.com]
-- 💬 Telegram: [https://t.me/kignoflove]
+- 📧 Email: ![ankitkumar875740@gmail.com](mailto:ankitkumar875740@gmail.com)
+- 💬 Telegram: ![@kignoflove](https://t.me/kignoflove)
 
 ---
 
